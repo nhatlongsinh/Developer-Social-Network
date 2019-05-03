@@ -8,9 +8,7 @@
     "dev": "concurrently \"npm run server\" \"cd client & npm start\" ",
     "client-install": "cd client & npm i",
     "server": "set DEBUG=server, server:* & nodemon node server.js",
-    "preheroku-deploy": "git commit -a -m 'deploy'",
-    "heroku-deploy": "git push heroku master",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm run client-install && npm run build"
+    "build": "NPM_CONFIG_PRODUCTION=false npm run client-install && npm run build"
   },
   "author": "Jason Nguyen",
   "license": "MIT",
