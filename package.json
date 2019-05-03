@@ -1,0 +1,36 @@
+{
+  "name": "developer-social",
+  "version": "1.0.0",
+  "description": "Social network for developer",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "concurrently \"npm run server\" \"cd client & npm start\" ",
+    "client-install": "cd client & npm i",
+    "server": "set DEBUG=server, server:* & nodemon node server.js",
+    "preheroku-deploy": "git commit -a -m 'deploy'",
+    "heroku-deploy": "git push heroku master",
+    "heroku-postbuild": "npm run client-install && npm run build"
+  },
+  "author": "Jason Nguyen",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "debug": "^4.1.1",
+    "express": "^4.16.4",
+    "gravatar": "^1.8.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.5.4",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "validator": "^10.11.0"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "mockgoose": "^8.0.1",
+    "nodemon": "^1.18.11"
+  }
+}

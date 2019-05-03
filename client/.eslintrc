@@ -1,0 +1,17 @@
+{
+  "extends": ["react-app", "airbnb", "plugin:jsx-a11y/recommended"],
+  "plugins": ["jsx-a11y"],
+  "rules": {
+    "react/jsx-filename-extension": [1, { "extensions": [".js"] }],
+    "react/destructuring-assignment": [
+      1,
+      "always",
+      { "ignoreClassFields": true }
+    ],
+    "import/no-extraneous-dependencies": [0, { "devDependencies": true }],
+    "no-underscore-dangle": [0],
+    "react/forbid-prop-types": [0],
+    "import/no-named-as-default": [0],
+    "comma-dangle": 0
+  }
+}
